@@ -1,0 +1,12 @@
+
+<div (click)="createGame()">
+  <h2>neues Spiel erstellen</h2>
+</div>
+
+<div>
+  <form (submit)="joinGame()">
+    <h2>Spiel beitreten</h2>
+    <input type="text" name="gameid" [(ngModel)]="gameid" placeholder="Spiel-ID eingeben" autofocus>
+    <input type="submit" value="beitreten">
+  </form>
+</div>

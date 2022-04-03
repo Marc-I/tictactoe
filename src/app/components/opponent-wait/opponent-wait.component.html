@@ -1,0 +1,12 @@
+<div>
+  <p>Spiel-ID an Gegner übermitteln: <strong>{{gameid}}</strong></p>
+  <h2>auf Gegner warten...</h2>
+</div>
+
+<div>
+  <form (submit)="joinGame()">
+    <h2>Spiel beitreten</h2>
+    <input type="text" name="gameid" [(ngModel)]="joingameid" placeholder="Spiel-ID eingeben" autofocus>
+    <input type="submit" value="beitreten">
+  </form>
+</div>

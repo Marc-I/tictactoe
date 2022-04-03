@@ -1,0 +1,13 @@
+
+<h3 *ngIf="game && game.status === enGameStatus.RUNNING">{{game.turn?.username}} ist an der Reihe</h3>
+<h3 *ngIf="game && game.status === enGameStatus.WON">{{game.turn?.username}} hat gewonnen!</h3>
+<h3 *ngIf="game && game.status === enGameStatus.DRAW">Es ist unentschieden!</h3>
+<p *ngIf="game && game.status !== enGameStatus.RUNNING"><span (click)="revanche()">Revanche</span>, <span (click)="newGame()">Spiel beitreten</span> oder <span (click)="newGame()">neues Spiel starten</span>?</p>
+
+<div id="board">
+  <div *ngFor="let i of numbers" [class.disabled]="game && game.board[i] !== '-'"
+  (click)="play(i)">
+    {{game && game.board[i] !== '-' ? game.board[i] : ''}}
+  </div>
+</div>
+

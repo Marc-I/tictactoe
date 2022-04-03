@@ -1,0 +1,15 @@
+header, h1 {
+  width: 100%;
+  text-align: center;
+  max-inline-size: 100%;
+}
+
+main {
+  margin: var(--size-2) auto;
+  max-width: 800px;
+
+  p {
+    text-align: center;
+    max-inline-size: 100%;
+  }
+}

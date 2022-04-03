@@ -1,0 +1,6 @@
+<div>
+  <h3>Revanche vorgeschlagen</h3>
+  <h2 *ngIf="requester">auf Gegner warten...</h2>
+  <h2 *ngIf="!requester" class="accept" (click)="accept()">annehmen?</h2>
+  <p style="text-align: right" (click)="reject()">Revanche ablehnen</p>
+</div>

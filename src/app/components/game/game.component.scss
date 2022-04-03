@@ -1,0 +1,38 @@
+
+p span {
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--gray-5);
+  }
+}
+
+#board {
+  display: grid;
+  margin: 50px auto;
+  width: 490px;
+  place-items: center;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+
+  div {
+    display: grid;
+    place-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: var(--radius-conditional-2);
+    border: var(--border-size-1) solid var(--surface-3);
+    background: var(--surface-2);
+    font-size: 4em;
+    user-select: none;
+
+    &:not(.disabled) {
+      cursor: pointer;
+
+      &:hover {
+        background: var(--surface-3);
+      }
+    }
+  }
+}
