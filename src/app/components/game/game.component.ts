@@ -30,7 +30,7 @@ export class GameComponent implements OnInit {
   }
 
   play(field: number) {
-    if (!this.game) {
+    if (!this.game || this.game.board[field] !== '-') {
       return;
     }
    if (this.game.turn?.userid === UserService.UserId) {
