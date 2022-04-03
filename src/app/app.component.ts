@@ -33,4 +33,8 @@ export class AppComponent {
       this.game = GameService.Game;
     }
   }
+
+  leaveGame() {
+    GameService.UnsetGame();
+  }
 }

@@ -11,5 +11,11 @@ main {
   p {
     text-align: center;
     max-inline-size: 100%;
+
+    &.leave-game {
+      text-align: right;
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 }

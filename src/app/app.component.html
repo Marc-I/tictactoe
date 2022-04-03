@@ -5,6 +5,7 @@
 <main>
   <app-user-create *ngIf="!username"></app-user-create>
   <p *ngIf="username">Hallo {{username}}!</p>
+  <p *ngIf="username && game" class="leave-game" (click)="leaveGame()">aktuelles Spiel verlassen?</p>
 
   <app-game-selection *ngIf="username && !game"></app-game-selection>
   <app-opponent-wait *ngIf="game && !game.user_2"></app-opponent-wait>
